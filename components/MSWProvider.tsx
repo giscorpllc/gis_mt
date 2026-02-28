@@ -3,23 +3,21 @@
 import { useEffect, useState } from "react";
 
 export function MSWProvider({ children }: { children: React.ReactNode }) {
-  const [ready, setReady] = useState(false);
+  const [ready, setReady] = useState(
+    process.env.NEXT_PUBLIC_APP_ENV !== "development"
+  );
 
   useEffect(() => {
-    if (process.env.NEXT_PUBLIC_APP_ENV !== "development") {
-      setReady(true);
-      return;
+    if (process.env.NEXT_PUBLIC_APP_ENV === "development") {
+      import("../mocks/browser").then(({ worker }) => {
+        worker
+          .start({ onUnhandledRequest: "bypass" })
+          .then(() => setReady(true));
+      });
     }
-
-    import("../mocks/browser").then(({ worker }) => {
-      worker.start({ onUnhandledRequest: "bypass" }).then(() => setReady(true));
-    });
   }, []);
 
-  // Avoid rendering children until MSW is ready in dev (prevents race conditions)
-  if (process.env.NEXT_PUBLIC_APP_ENV === "development" && !ready) {
-    return null;
-  }
+  if (!ready) return null;
 
   return <>{children}</>;
 }
