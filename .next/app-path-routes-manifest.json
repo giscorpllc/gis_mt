@@ -1,0 +1,14 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/auth/forgot-password/page": "/auth/forgot-password",
+  "/auth/login/page": "/auth/login",
+  "/auth/register/page": "/auth/register",
+  "/auth/verify-mfa/page": "/auth/verify-mfa",
+  "/auth/verify/page": "/auth/verify",
+  "/dashboard/page": "/dashboard",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/privacy/page": "/privacy",
+  "/terms/page": "/terms"
+}
