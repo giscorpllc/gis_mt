@@ -1,0 +1,18 @@
+services:
+  web:
+    build:
+      context: .
+      # Use the builder stage so the full dev toolchain is available
+      target: builder
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount source for hot reload
+      - .:/app
+      # Keep the container's node_modules isolated from the host
+      - /app/node_modules
+      - /app/.next
+    command: npm run dev
+    environment:
+      - NEXT_PUBLIC_APP_ENV=development
+      - NEXT_PUBLIC_API_BASE_URL=

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../app/page.tsx"],"sourcesContent":["// Middleware redirects \"/\" to /dashboard (authenticated) or /auth/login (unauthenticated).\n// This file exists only to satisfy Next.js's requirement for a root page.\nexport default function Home() {\n  return null;\n}\n"],"names":[],"mappings":"qUAEe,SAAS,IACtB,OAAO,IACT"}

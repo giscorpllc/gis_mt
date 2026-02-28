@@ -1,0 +1,2 @@
+:HL["/gis_mt/_next/static/chunks/0991455d103e7e40.css","style"]
+0:{"buildId":"jsHQ8m5_MMCNrWrWH7VS8","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
